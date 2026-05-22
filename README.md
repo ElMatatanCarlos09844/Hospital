@@ -2,6 +2,37 @@
 
 Este proyecto es una pequeña aplicación de escritorio en Java usando Swing para administrar médicos en un hospital.
 
+## Requisitos previos
+
+Para ejecutar este proyecto necesitas tener instalado:
+
+- **Java JDK 8 o superior**
+  - Verifica tu versión: `java -version`
+  - Descarga desde: https://www.oracle.com/java/technologies/javase-jdk11-downloads.html
+
+- **Apache Maven 3.6 o superior**
+  - Verifica tu versión: `mvn -version`
+  - Descarga desde: https://maven.apache.org/download.cgi
+
+- **Git (opcional, si quieres clonar desde Git)**
+  - Descarga desde: https://git-scm.com/
+
+## Clonar el repositorio
+
+### Usando Git
+
+```bash
+git clone https://github.com/ElMatatanCarlos09844/Hospital.git
+cd Hospital
+```
+
+### Descargando como ZIP
+
+1. Ve a https://github.com/ElMatatanCarlos09844/Hospital
+2. Haz clic en el botón verde **"Code"**
+3. Selecciona **"Download ZIP"**
+4. Descomprime el archivo en tu computadora
+
 ## Contenido del proyecto
 
 - `src/main/java/com/mycompany/hospital/Main.java`
@@ -43,16 +74,35 @@ Este proyecto es una pequeña aplicación de escritorio en Java usando Swing par
 
 ## Ejecución
 
-Compila y ejecuta con Maven o desde tu IDE.
+### Desde la línea de comandos con Maven
 
-```bash
-mvn compile
-mvn exec:java -Dexec.mainClass="com.mycompany.hospital.Main"
-```
+1. Abre una terminal en el directorio del proyecto:
+   ```bash
+   cd Hospital
+   ```
 
-> Si al final quieres incluir las imágenes del proyecto, coloca los archivos en:
-> - `docs/diagrama-proyecto.png`
-> - `docs/diagrama-conexiones.png`
+2. Compila el proyecto:
+   ```bash
+   mvn clean compile
+   ```
+
+3. Ejecuta la aplicación:
+   ```bash
+   mvn exec:java -Dexec.mainClass="com.mycompany.hospital.Main"
+   ```
+
+### Desde tu IDE (NetBeans, Eclipse, IntelliJ IDEA)
+
+1. **Abre el proyecto:**
+   - Archivo → Abrir proyecto → Selecciona la carpeta `Hospital`
+
+2. **Ejecuta la aplicación:**
+   - Click derecho en el proyecto → Run
+   - O presiona `Shift + F6` (NetBeans)
+
+3. **Construye el proyecto:**
+   - Click derecho en el proyecto → Build
+   - O presiona `F11` (NetBeans)
 
 ## Diagrama del proyecto
 
