@@ -20,8 +20,22 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 /**
- *
+ * Ventana para registrar nuevos médicos en el sistema.
+ * 
+ * Proporciona un formulario con los siguientes campos:
+ * - Cédula de identificación
+ * - Nombre completo
+ * - Sexo
+ * - Especialidad médica
+ * - Sub-especialidad
+ * - Sueldo
+ * 
+ * Valida todos los campos antes de guardar y notifica al usuario
+ * sobre errores de validación o éxito en la operación.
+ * 
  * @author Carlos Cisneros
+ * @version 1.0
+ * @since 2026-05-21
  */
 // Ventana para capturar los datos de un nuevo médico y añadirlo al sistema.
 public class VentanaAltas extends JFrame {
