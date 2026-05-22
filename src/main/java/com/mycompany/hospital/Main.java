@@ -9,8 +9,14 @@ import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
 
 /**
- * Clase principal que arranca la aplicación.
- * Contiene el método main, que es el primer código que se ejecuta.
+ * Clase principal que inicia la aplicación del Sistema de Gestión de Médicos.
+ * 
+ * Esta clase contiene el método main que arranca la interfaz gráfica de Swing
+ * en el hilo de eventos apropiado para garantizar que la GUI sea thread-safe.
+ * 
+ * @author Carlos Cisneros
+ * @version 1.0
+ * @since 2026-05-21
  */
 public class Main {
 
