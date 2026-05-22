@@ -15,8 +15,18 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 
 /**
- *
+ * Ventana principal del sistema de gestión de médicos.
+ * 
+ * Proporciona un menú con dos opciones principales:
+ * - Registrar nuevos médicos (VentanaAltas)
+ * - Consultar médicos existentes (VentanaConsultas)
+ * 
+ * Mantiene una lista compartida de médicos que se pasa a otras ventanas
+ * para sincronizar los datos en toda la aplicación.
+ * 
  * @author Carlos Cisneros
+ * @version 1.0
+ * @since 2026-05-21
  */
 // Ventana principal que muestra el menú de navegación para el sistema.
 // Desde aquí el usuario puede ir a registrar nuevos médicos o ver los ya registrados.
