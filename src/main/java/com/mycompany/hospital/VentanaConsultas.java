@@ -17,8 +17,17 @@ import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
 /**
- *
+ * Ventana para consultar los médicos registrados en el sistema.
+ * 
+ * Muestra una tabla JTable con todos los médicos almacenados en memoria,
+ * incluyendo sus datos: cédula, nombre, sexo, especialidad, sub-especialidad y sueldo.
+ * 
+ * La tabla se actualiza automáticamente cada vez que se abre la ventana,
+ * mostrando los médicos más recientemente registrados.
+ * 
  * @author Carlos Cisneros
+ * @version 1.0
+ * @since 2026-05-21
  */
 // Ventana que muestra los médicos registrados en una tabla.
 // Sólo sirve para leer los datos guardados en memoria.
