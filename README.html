@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital - Sistema de Gestión de Médicos</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.8;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            color: #2c3e50;
+            background-color: #ecf0f1;
+        }
+        
+        h1 {
+            color: #2980b9;
+            border-bottom: 4px solid #3498db;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+            page-break-after: avoid;
+        }
+        
+        h2 {
+            color: #34495e;
+            margin-top: 35px;
+            margin-bottom: 20px;
+            page-break-after: avoid;
+            border-left: 5px solid #3498db;
+            padding-left: 15px;
+        }
+        
+        h3 {
+            color: #555;
+            page-break-after: avoid;
+        }
+        
+        p {
+            margin: 15px 0;
+            text-align: justify;
+        }
+        
+        li {
+            margin: 12px 0;
+            padding-left: 5px;
+        }
+        
+        code {
+            background-color: #f4f4f4;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            color: #c7254e;
+        }
+        
+        pre {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 20px;
+            border-radius: 6px;
+            overflow-x: auto;
+            page-break-inside: avoid;
+            font-family: 'Courier New', monospace;
+            line-height: 1.5;
+            border-left: 5px solid #3498db;
+        }
+        
+        blockquote {
+            background-color: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+            page-break-inside: avoid;
+        }
+        
+        blockquote strong {
+            color: #856404;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 30px 0;
+            page-break-inside: avoid;
+            border-radius: 6px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        .container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        
+        ol {
+            margin-left: 20px;
+        }
+        
+        @media print {
+            body {
+                background-color: white;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+                padding: 0;
+            }
+            h1, h2, h3 {
+                page-break-after: avoid;
+            }
+            pre, blockquote, img {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hospital - Sistema de Gestión de Médicos</h1>
+        
+        <p>Este proyecto es una pequeña aplicación de escritorio en Java usando Swing para administrar médicos en un hospital.</p>
+        
+        <h2>Contenido del proyecto</h2>
+        
+        <ul>
+            <li>
+                <code>src/main/java/com/mycompany/hospital/Main.java</code>
+                <ul>
+                    <li>Punto de entrada de la aplicación.</li>
+                    <li>Inicia la interfaz gráfica y muestra la ventana principal.</li>
+                </ul>
+            </li>
+            
+            <li>
+                <code>src/main/java/com/mycompany/hospital/VentanaPrincipal.java</code>
+                <ul>
+                    <li>Ventana principal con dos botones:
+                        <ul>
+                            <li>Alta de Médicos</li>
+                            <li>Consultar Médicos</li>
+                        </ul>
+                    </li>
+                    <li>Contiene una lista compartida de médicos que se pasa a las demás ventanas.</li>
+                </ul>
+            </li>
+            
+            <li>
+                <code>src/main/java/com/mycompany/hospital/VentanaAltas.java</code>
+                <ul>
+                    <li>Ventana para agregar un nuevo médico.</li>
+                    <li>Valida que todos los campos estén completos.</li>
+                    <li>Crea un objeto <code>Medico</code> y lo añade a la lista compartida.</li>
+                </ul>
+            </li>
+            
+            <li>
+                <code>src/main/java/com/mycompany/hospital/VentanaConsultas.java</code>
+                <ul>
+                    <li>Ventana que muestra la lista de médicos en una tabla.</li>
+                    <li>Lee los datos de la lista compartida y los muestra en <code>JTable</code>.</li>
+                </ul>
+            </li>
+            
+            <li>
+                <code>src/main/java/com/mycompany/hospital/Medico.java</code>
+                <ul>
+                    <li>Clase simple que almacena los datos de un médico:
+                        <ul>
+                            <li>cedula</li>
+                            <li>nombre</li>
+                            <li>sexo</li>
+                            <li>especialidad</li>
+                            <li>subEspecialidad</li>
+                            <li>sueldo</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        
+        <h2>Flujo general</h2>
+        
+        <ol>
+            <li>El programa inicia en <code>Main.main()</code>.</li>
+            <li>Se abre <code>VentanaPrincipal</code>.</li>
+            <li>El usuario puede:
+                <ul>
+                    <li>Registrar médicos en <code>VentanaAltas</code>.</li>
+                    <li>Consultar médicos en <code>VentanaConsultas</code>.</li>
+                </ul>
+            </li>
+            <li>Todos los datos se mantienen en memoria dentro de un <code>ArrayList&lt;Medico&gt;</code> mientras la aplicación está abierta.</li>
+        </ol>
+        
+        <h2>Ejecución</h2>
+        
+        <p>Compila y ejecuta con Maven o desde tu IDE.</p>
+        
+        <pre>mvn compile
+mvn exec:java -Dexec.mainClass="com.mycompany.hospital.Main"</pre>
+        
+        <h2>Diagrama del proyecto</h2>
+        
+        <p>Este diagrama muestra la arquitectura general del sistema:</p>
+        
+        <img src="diagrama-proyecto.png" alt="Diagrama del proyecto - Arquitectura">
+        
+        <h2>Diagrama de conexiones y flujo</h2>
+        
+        <p>Este diagrama detalla las conexiones entre componentes y el flujo de datos:</p>
+        
+        <img src="diagrama-conexiones.png" alt="Diagrama de conexiones y flujo">
+        
+        <blockquote>
+            <strong>Para imprimir como PDF:</strong> Usa el atajo de teclado <code>Ctrl+P</code> o ve a Archivo > Imprimir. Selecciona "Guardar como PDF" como destino.
+        </blockquote>
+    </div>
+</body>
+</html>
