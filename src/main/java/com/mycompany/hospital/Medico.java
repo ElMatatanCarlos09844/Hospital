@@ -5,11 +5,14 @@
 package com.mycompany.hospital;
 
 /**
- *
+ * Clase modelo que representa la información de un médico.
+ * 
+ * Esta clase actúa como un DTO (Data Transfer Object) y almacena
+ * los datos personales y profesionales de un médico del hospital.
+ * 
  * @author Carlos Cisneros
+ * @version 1.0
  */
-// Objeto de datos simple que representa la información de un médico.
-// Este tipo de clase se llama "modelo" o "DTO" y sólo guarda valores.
 public class Medico {
     public String cedula; // Cédula de identidad del médico.
     public String nombre; // Nombre completo.
